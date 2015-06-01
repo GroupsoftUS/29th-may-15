@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html  ng-controller="indexController">
+<head>
+<base href="/">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- include the required css files -->
+<!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>-->
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css">
+<link type="text/css" rel="stylesheet" href="css/global.css" />
+<link type="text/css" rel="stylesheet" href="css/global-responise.css" />
+<!-- include the required css files -->
+<title></title>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="login_wrap" >
+    	<div class="pull-right w-40 log-block" ng-hide="postLogin">
+        	<div class="log-item">
+            	<div class="log-details">
+                	<div class="log-title"><span class="colr" ng-bind="languagePack.Gr"></span><span ng-bind="languagePack.Map"></span></div>
+                	<form class="form-horizontal">
+                    	<div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+                            <input id="login-username" type="text" class="form-control parentError empty validate" ng-model="providedCompany" placeholder="{{languagePack.Company}}">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="login-username" type="text" class="form-control parentError empty validate" ng-model="providedName"  placeholder="{{languagePack.Username}}">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-username" type="password" class="form-control parentError empty validate" ng-model="providedPassword"  placeholder="{{languagePack.Password}}">
+                        </div>
+						<div class="form-group">
+							<div class="col-sm-6 text-right pull-right">
+                            	<a href="javascript:void(0)" ng-bind="languagePack.Forgot_password"></a>
+                            </div>
+							<div class="col-sm-6 pull-left errror-msg" ng-if="error == 1" ng-bind="languagePack.passwordError"></div>
+						</div>
+                        <div class="log-btn">
+                        	<button class="btn btn-lg btn-primary btn-block" type="button" ng-click="login()" ng-bind="languagePack.Login"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>	
+        </div>
+        
+        <div class="sign_in_block " ng-show="postLogin" style="display:none">
+        	<div class="logout-block">
+            	<a href="javascript:void(0)" class="logout-btn" id="logout" title="Logout" ng-click="logout()">
+                	<span class="logout-ico"><i class="glyphicon glyphicon-off"></i></span><br ng-bind="languagePack.Logout">
+                </a>
+            </div>
+            <div class="user-block">
+            	<div class="user-img">
+                	<img ng-src="{{userData != undefined ? userData.image : ''}}" class="img-circle">
+                </div>
+                <div class="user-txt" ng-bind="userData.username"></div>
+            </div>
+            <div class="w-40 ext-maping">
+            	  <div class="ext-item pull-left bdr-lr">
+                	<a href="retail-calendar/retail-calendar.html" class="assort_plan" title="{{languagePack.Retail_Calendar}}" ng-bind="languagePack.Retail_Calendar"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- include the required js files -->
+<script src="js/jquery.js" type="text/javascript"></script>	
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>	
+<script src="js/angular.js" type="text/javascript"></script>	
+<script src="js/angular-cookies.js" type="text/javascript"></script>	
+<script src="js/bootstrap.js" type="text/javascript"></script>	
+<script src="resource/language/en.js" type="text/javascript"></script>	
+<script src="js/services.js" type="text/javascript"></script>	
+<script src="js/filters.js" type="text/javascript"></script>	
+<script src="modules/login/controllers.js" type="text/javascript"></script>
+<!-- include the required js files -->
+
+</body>
+</html>

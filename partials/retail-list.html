@@ -1,0 +1,48 @@
+<div class="wid100" search></div>
+
+<div class="panel-body fnt-size no-padd">
+	<div id="pepf-table" class="pepf-table-block">
+	
+		<table class="col-md-12 table-bordered table-condensed cf pepf-data-table" ng-hide="dataload">
+			<thead class="cf">
+				<tr>
+					<th width="100" ng-bind="languagePack.Loading"></th>
+				<tr>
+			</thead>
+		</table>
+	
+		
+		<table class="col-md-12 table-bordered table-condensed cf pepf-data-table" ng-show="dataload">
+			<thead class="cf">
+				<tr>
+					<th width="18%" ng-bind="languagePack.Name"></th>
+					<th width="17%" ng-bind="languagePack.Description"></th>
+					<th width="17%" ng-bind="languagePack.Season" class="numeric"></th>
+					<th width="12%" ng-bind="languagePack.Start_Date" class="numeric"></th>
+					<th width="12%" ng-bind="languagePack.End_Date" class="numeric"></th>
+					<th width="12%" ng-bind="languagePack.Reminder" class="numeric"></th>
+					<th width="12%" ng-bind="languagePack.Actions" class="text-center"></th>
+				</tr>
+			</thead>
+			<tbody>
+				
+
+				<tr ng-repeat="data in listData">
+					<td data-title="{{languagePack.Name}}" class="fest_label">
+						<a title="Sample Festival" href="javascript:void(0)" ng-bind="data.retailcalname"></a>
+					</td>
+					<td data-title="{{languagePack.Description}}" ng-bind="data.retailcaldesc"></td>
+					<td data-title="{{languagePack.Season}}" class="numeric" ng-bind="data.season"></td>
+					<td data-title="{{languagePack.Start_Date}}" class="numeric" ng-bind="data.retailcalfromdate"></td>
+					<td data-title="{{languagePack.End_Date}}" class="numeric" ng-bind="data.retailcaltodate"></td>
+					<td data-title="{{languagePack.Reminder}}" ng-class=" data.reminder!= 'Yes' ? 'status_fail' : 'status_done'" ng-bind="data.reminder"></td>
+					<td data-title="{{languagePack.Actions}}" class="text-center">
+						<div class="action-block" action></div>
+					</td>
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+
+	<div class="menu-button">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>			
+			</div>
+				<!-- Logo -->
+			<div class="logo pull-left">
+				<a href="javascript:void(0)" title="{{languagePack.GROUPSOFT}}">
+					<img src="images/logo.png" title="{{languagePack.GROUPSOFT}}" alt="{{languagePack.GROUPSOFT}}" >
+				</a>
+			</div>				
+			<div class="pull-right rgt-col">
+					<ul class="nav-right pull-left list-unstyled">
+						
+						<li class="dropdown pull-left notify app_list">
+							<select class="selectpicker show-menu-arrow" id="menuOption"> 
+								<option ng-repeat="item in menuOptions" value="{{item.value}}" ng-bind="item.name" ng-selected="{{item.selector==currentMenu}}"></option>		
+							</select>
+						</li>
+						
+						<li class="dropdown text-normal nav-profile pull-left">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);" aria-haspopup="true" aria-expanded="false">
+								<span class="hidden-xs">
+									<span class="usrnme" ng-bind="userData.username"></span>
+								</span>
+								<img class="img-circle img30_30" alt="" ng-src="{{userData.image}}">
+							</a>
+							<ul class="dropdown-menu with-arrow pull-right">
+								<li>
+									<a href="javascript:void(0)" ng-click="logout()">
+										<i class="fa fa-sign-out"></i>
+										<span ng-bind="languagePack.Logout"></span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					
+	</div>

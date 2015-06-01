@@ -1,0 +1,29 @@
+
+		<div class="panel-heading">
+			<div class="pull-left title-col">
+				<span class="block-title retail_cal" ng-bind="searchTitle"></span>
+			</div>
+			<div class="submit-block pepf_popup pull-right">
+				<div class="save-block add_pepf">
+					<button data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="submit" title="Create Retail Calendar"><i class="fa fa-plus"></i></button>
+					<ul class="dropdown-menu with-arrow pull-right">
+						<li>
+							<a ng-href="{{createUrl}}"><span ng-bind="urlTitle"></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="search-col pull-right">
+				<div class="col-sm-11">
+					<div class="input-group">
+						<input type="hidden" name="search_param" value="all" id="search_param">         
+						<input type="text" class="form-control" name="x" placeholder="search">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="clear_both">&nbsp;</div>
+		</div>                            
+   
